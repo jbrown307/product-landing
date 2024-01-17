@@ -4,3 +4,16 @@ html {
     font-size: 65.2%;
 }
 
+.flex-header {
+    border: dotted 3px blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    border: dotted 3px red;
+}
+
+.header-right {
+    border: dotted 3px red;
+}
