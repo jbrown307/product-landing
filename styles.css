@@ -32,15 +32,6 @@ html {
     align-items: center;
 }
 
-.flex-container-hero { /*Is this container even necessary?*/
-    border: dotted 3px blue;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vw;
-}
-
 .hero {
     border: dotted 3px red;
     
@@ -50,11 +41,12 @@ html {
     width: 50vw;
     height: 10vw;
     justify-content: space-evenly;
-    /* margin: 0 auto;  */
+    margin: 0 auto;
+    margin-top: 5vh;
 }
 
 h1 {
-    margin: 0; /*What unit of measure is 0?*/
+    margin: 0; /*What unit of measure is 0? 0 is not an unit of anything; it just means nothing*/
 }
 
 
