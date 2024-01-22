@@ -3,7 +3,11 @@ html {
     padding: 0;
 }
 
-.flex-container-navbar {
+body {
+    /* background-color: blueviolet; */
+}
+
+.container-flex-navbar {
     border: dotted 3px blue;
     
     display: flex;
@@ -43,10 +47,56 @@ html {
     justify-content: space-evenly;
     margin: 0 auto;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 h1 {
-    margin: 0; /*What unit of measure is 0? 0 is not an unit of anything; it just means nothing*/
+    margin: 0;
+}
+
+/* Make into a single gird!!! */
+
+.container-grid-feature-1 {
+    border: dotted 3px blue;
+
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 5vh;
+
+}
+
+
+.container-grid-feature-2 {
+    border: dotted 3px blue;
+
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 5vh;
+
+}
+
+.container-grid-feature-3 {
+    border: dotted 3px blue;
+
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 5vh;
+
+}
+
+.icon {
+    border: dotted 3px red;
+    align-content: center;
+
+}
+
+.feature-description {
+    border: dotted 3px red;
+
+}
+
+.feature-image {
+    width: 50%;
 }
 
 
