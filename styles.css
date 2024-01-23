@@ -1,33 +1,49 @@
+/* TODO: 
+- make navbar fixed
+- rotate icon-feature-3
+- create new company logo
+- create linear gradient for page background
+- delete div borders
+- change navlinks positioning to flex-end
+- remove left margin in unordered lists */
+
 html {
     margin: 0;
     padding: 0;
 }
 
-body {
-    /* background-color: blueviolet; */
+h1 {
+    margin: 0;
 }
 
-.container-flex-navbar {
-    border: dotted 3px blue;
+ul {
+    list-style-type: none;
+  }
+
+.navbar-flex-container {
+    border: solid 6px red;
     
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-bottom: 10vh;
 }
 
-.navbar-left-section {
-    border: dotted 3px red;
+.navbar-left {
+    border: solid 3px blue;
     
     display:flex;
     align-items: center;
     flex: 25%
 }
 
-.logo {
-    width: 25%;
+.company-logo {
+    width: 3rem;;
+    height: 3rem;
+    background-color: lightslategray;
 }
 
-.navbar-right-section {
-    border: dotted 3px red;
+.navbar-right {
+    border: solid 3px blue;
     
     display: flex;
     flex-wrap: wrap;
@@ -36,8 +52,8 @@ body {
     align-items: center;
 }
 
-.hero {
-    border: dotted 3px red;
+.hero-flex-container {
+    border: solid 6px red;
     
     display: flex;
     flex-direction: column;
@@ -46,57 +62,75 @@ body {
     height: 10vw;
     justify-content: space-evenly;
     margin: 0 auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
 }
 
-h1 {
-    margin: 0;
-}
+.feature-grid-container {
+    border: solid 6px red;
 
-/* Make into a single gird!!! */
-
-.container-grid-feature-1 {
-    border: dotted 3px blue;
-
-    display: grid;
-    grid-template-columns: 10% 90%;
-    margin-bottom: 5vh;
-
+    display:grid;
+    grid-template-columns: 15% 85%;
+    margin-bottom: 10vh;
 }
 
 
-.container-grid-feature-2 {
-    border: dotted 3px blue;
+.feature-icon {
+    border: solid 3px blue;
 
-    display: grid;
-    grid-template-columns: 10% 90%;
-    margin-bottom: 5vh;
-
-}
-
-.container-grid-feature-3 {
-    border: dotted 3px blue;
-
-    display: grid;
-    grid-template-columns: 10% 90%;
-    margin-bottom: 5vh;
-
-}
-
-.icon {
-    border: dotted 3px red;
-    align-content: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-description {
-    border: dotted 3px red;
+    border: solid 3px blue;
 
+    display: flex;
+    flex-direction: column;
 }
 
-.feature-image {
-    width: 50%;
+.icon-feature-1 {
+    width: 6rem;
+    height: 6rem;
+    background-color: lightblue;
+    border-radius: 100%;
 }
+
+.icon-feature-2 {
+    width:6rem;
+    height: 6rem;
+    background-color: lightgreen;
+    border-radius: 25%;
+}
+
+.icon-feature-3 {
+    width: 6rem;
+    height: 6rem;
+    background-color: lightcoral;
+}
+
+.product-video {
+    border: solid 6px red;
+    
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+}
+
+.pricing-flex-container {
+    border: solid 6px red;
+
+    display:flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 10vh;
+}
+
+.price-card {
+    border: solid 3px blue;
+}
+
+
+
 
 
