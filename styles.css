@@ -4,8 +4,7 @@
 - create new company logo
 - create linear gradient for page background
 - delete div borders
-- change navlinks positioning to flex-end
-- remove left margin in unordered lists */
+- change navlinks positioning to flex-end */
 
 html {
     margin: 0;
@@ -17,15 +16,17 @@ h1 {
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     list-style-type: none;
   }
 
 .navbar-flex-container {
     border: solid 6px red;
-    
+    position: fixed;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 10vh;
+    width: 100vw;
 }
 
 .navbar-left {
@@ -33,7 +34,7 @@ ul {
     
     display:flex;
     align-items: center;
-    flex: 25%
+    flex: 25%;
 }
 
 .company-logo {
@@ -50,6 +51,10 @@ ul {
     flex: 75%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.nav-link {
+    justify-content: end;
 }
 
 .hero-flex-container {
@@ -128,8 +133,35 @@ ul {
 
 .price-card {
     border: solid 3px blue;
+
 }
 
+.footer-flex-container {
+    border: solid 6px red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.site-nav {
+    border: solid 3px blue;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-site {
+    margin-left: 1.5rem;
+}
+
+.legal-info {
+    border: solid 3px blue;
+    
+    display:flex;
+    justify-content: flex-end;
+    
+}
 
 
 
