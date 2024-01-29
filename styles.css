@@ -1,14 +1,14 @@
-/* TODO: 
-- make navbar fixed
-- rotate icon-feature-3
-- create new company logo
+/* TODO:
 - create linear gradient for page background
-- delete div borders
-- change navlinks positioning to flex-end */
+- delete div borders */
 
 html {
     margin: 0;
     padding: 0;
+}
+
+body {
+    padding-top: 10vh;
 }
 
 h1 {
@@ -23,38 +23,60 @@ ul {
 
 .navbar-flex-container {
     border: solid 6px red;
+    
     position: fixed;
     display: flex;
     justify-content: flex-end;
-    width: 100vw;
+    width: 62.5rem;
+    top: 0;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%) /*How does this even work, though?*/
 }
 
 .navbar-left {
     border: solid 3px blue;
     
-    display:flex;
+    display: flex;
     align-items: center;
     flex: 25%;
 }
 
-.company-logo {
-    width: 3rem;;
+.logo-left {
+    width: 2rem;;
     height: 3rem;
-    background-color: lightslategray;
+    background-color: lightblue;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 50%;
 }
 
+.logo-middle {
+    width: 2rem;;
+    height: 3rem;
+    background-color: lightgreen;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 50%;
+}
+
+.logo-right {
+    width: 2rem;;
+    height: 3rem;
+    background-color: lightcoral;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-radius: 50%;
+}
 .navbar-right {
     border: solid 3px blue;
     
     display: flex;
     flex-wrap: wrap;
     flex: 75%;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-link {
     justify-content: end;
+    margin-left: 1.5rem;
 }
 
 .hero-flex-container {
@@ -99,19 +121,23 @@ ul {
     height: 6rem;
     background-color: lightblue;
     border-radius: 100%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .icon-feature-2 {
     width:6rem;
     height: 6rem;
     background-color: lightgreen;
-    border-radius: 25%;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .icon-feature-3 {
     width: 6rem;
     height: 6rem;
     background-color: lightcoral;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    border-radius: 5rem;
 }
 
 .product-video {
@@ -142,6 +168,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-bottom: 3vh;
 }
 
 .site-nav {
