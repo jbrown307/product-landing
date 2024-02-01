@@ -1,7 +1,9 @@
 /* TODO:
 - delete div borders */
 
-
+/* elements general */
+/* elements general */
+/* elements general */
 html {
     margin: 0;
     padding: 0;
@@ -11,7 +13,7 @@ body {
     padding-top: 10vh;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
@@ -21,8 +23,26 @@ ul {
     list-style-type: none;
   }
 
+img {
+    border: solid 3px blue;
+
+    width: 50vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+iframe {
+    border: solid 3px blue;
+}
+
+/* navbar component */
+/* navbar component */
+/* navbar component */
 .navbar-flex-container {
-    border: solid 6px red;
+    border: solid 3px red;
     
     position: fixed;
     display: flex;
@@ -75,13 +95,28 @@ ul {
     justify-content: flex-end;
 }
 
-.nav-link {
-    justify-content: end;
+.nav-links {
+    border: solid 3px blue;
+    
+    display: flex;
     margin-left: 1.5rem;
 }
 
+/* product image component */
+/* product image component */
+/* product image component */
+.product-image {
+    border: solid 3px red;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+}
+
+/* hero component */
+/* hero component */
+/* hero component */
 .hero-flex-container {
-    border: solid 6px red;
+    border: solid 3px red;
     
     display: flex;
     flex-direction: column;
@@ -93,8 +128,11 @@ ul {
     margin-bottom: 10vh;
 }
 
+/* feature component */
+/* feature component */
+/* feature component */
 .feature-grid-container {
-    border: solid 6px red;
+    border: solid 3px red;
 
     display:grid;
     grid-template-columns: 15% 85%;
@@ -103,7 +141,6 @@ ul {
     margin: 0 auto;
     
 }
-
 
 .feature-icon {
     border: solid 3px blue;
@@ -144,21 +181,23 @@ ul {
     border-radius: 5rem;
 }
 
+/* product video component */
+/* product video component */
+/* product video component */
 .product-video {
-    border: solid 6px red;
+    border: solid 3px red;
     
     width: fit-content;
     margin: 0 auto;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
 }
 
-iframe {
-    border: solid 3px blue;
-}
-
+/* pricing component */
+/* pricing component */
+/* pricing component */
 .pricing-flex-container {
-    border: solid 6px red;
+    border: solid 3px red;
 
     display:flex;
     justify-content: center;
@@ -173,8 +212,11 @@ iframe {
 
 }
 
+/* footer component */
+/* footer component */
+/* footer component */
 .footer-flex-container {
-    border: solid 6px red;
+    border: solid 3px red;
 
     display: flex;
     flex-direction: column;
@@ -187,14 +229,10 @@ iframe {
     border: solid 3px blue;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-.nav-site {
-    margin-bottom: 1.5rem;
-}
-
-.list-item {
+.nav-link {
     margin-left: 1.5rem;
 }
 
@@ -205,10 +243,13 @@ iframe {
     justify-content: flex-end;
 }
 
-@media (max-width: 375px) {
+/* Media Query */
+/* Media Query */
+/* Media Query */
+@media (max-width: 648px) {
     body {
         background-color: grey;
-        padding-top: 20vh;
+        padding-top: 15vh;
     }
 
     .navbar-flex-container {
@@ -229,9 +270,18 @@ iframe {
         margin-bottom: 3vh;
     }
 
+    .product-image {
+        margin-bottom: 3vh;
+    }
+
     .feature-grid-container {
         grid-template-columns: 30% 70%;
         width: 80vw;
+        margin-bottom: 3vh;
+    }
+
+    .product-video {
+        margin-top: 3vh;
         margin-bottom: 3vh;
     }
 
@@ -252,8 +302,9 @@ iframe {
         width: 85vw;
     }
 
-    .list-item {
-      margin: 0.5rem;
+    .nav-link {
+      margin-left: 0.5rem;
+      display: flex;
     }
 
     .legal-info {
