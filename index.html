@@ -20,7 +20,7 @@
                 <div class="logo-right"></div>
                 <p class="company-name">Company Name</p>
             </div>
-                    <!-- <a class="nav-link" href= "#Introduction">Introduction</a> -->
+            
             <div class="navbar-right">
                     <ul class="nav-links">
                         <a class="nav-link" href="#footer">navlink</a>
@@ -37,14 +37,23 @@
 <!-- hero component -->
 <!-- hero component -->
 <!-- hero component -->
-        <div class="hero-flex-container">
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <input  
-            type="email" 
-            placeholder="Enter your email address" 
-            required>
-            <button>GET STARTED</button>
-        </div>
+<div class="hero-flex-container">
+    <form 
+    id="form"
+    action="https://www.freecodecamp.com/email-submit">
+    <h1 class="main-heading">Lorem ipsum dolor sit ame!</h1>
+    <input
+    id="email"  
+    type="email"
+    name="email"
+    placeholder="Enter your email address" 
+    required>
+    <input
+    type="submit"
+    id="submit"
+    value="GET STARTED">
+    </form>
+</div>
 
 <!-- product image component -->
 <!-- product image component -->
@@ -52,7 +61,8 @@
     <div class="product-image">
         <img
         id= "header-img" 
-        src= "https://www.netigate.net/wp-content/uploads/2023/06/Customer-experience-trends-2023_2-1-1024x568.png">
+        src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKPbAC1SRgQeO6ATGEWj2cKJ
+        _glTdhoO4wA&usqp=CAU">
     </div>
 </header>
 
@@ -65,7 +75,7 @@
             <div class="icon-feature-1"></div>
         </div>
         <div class="feature-description">
-            <h1>feature 1</h1>
+            <h1 class="feature-heading">feature 1</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni incidunt 
             dignissimos odit maxime omnis.</p>
         </div>
@@ -74,7 +84,7 @@
             <div class="icon-feature-2"></div>
         </div>
             <div class="feature-description">
-                <h1>feature 2</h1>
+                <h1 class="feature-heading">feature 2</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi doloremque 
                 laboriosam magni ratione at enim fugit, non eligendi.</p>
             </div>
@@ -83,7 +93,7 @@
             <div class="icon-feature-3"></div>
         </div>
         <div class="feature-description">
-            <h1>feature 3</h1>
+            <h1 class="feature-heading">feature 3</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab soluta corrupti 
             eaque.</p>
         </div>
@@ -94,7 +104,8 @@
 <!-- product video component -->
 <!-- product video component -->
 <div class="product-video">
-    <iframe width="520" 
+    <iframe id="video" 
+    width="520" 
     height="315"
     src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
     </iframe>
@@ -114,6 +125,7 @@
             <li>Lorem, ipsum</li>
             <li>Lorem, ipsum</li>
         </ul>
+        <button>SELECT</button>
     </div>
 
     <div class="price-card">
@@ -125,6 +137,7 @@
             <li>Lorem, ipsum</li>
             <li>Lorem, ipsum</li>
         </ul>
+        <button>SELECT</button>
     </div>
 
     <div class="price-card">
@@ -136,6 +149,7 @@
             <li>Lorem, ipsum</li>
             <li>Lorem, ipsum</li>
         </ul>
+        <button>SELECT</button>
     </div>
 
 </div>

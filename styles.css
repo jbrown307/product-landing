@@ -1,5 +1,12 @@
 /* TODO:
+- fix hero component
+- fix breakpoint
+- fix alignment of footer navlinks
+- refactor code
+- Create variables
 - delete div borders */
+
+
 
 /* elements general */
 /* elements general */
@@ -11,9 +18,14 @@ html {
 
 body {
     padding-top: 10vh;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
-h1, h2 {
+p {
+    font-size: 1.5rem;
+}
+
+h1 {
     margin: 0;
 }
 
@@ -21,12 +33,14 @@ ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    font-size: 1.2rem;
   }
 
 img {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
 
     width: 50vw;
+    border-radius: 15%;
 }
 
 a {
@@ -35,27 +49,41 @@ a {
 }
 
 iframe {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
+}
+
+button {
+    margin-top: 1rem;
 }
 
 /* navbar component */
 /* navbar component */
 /* navbar component */
+
+#nav-bar {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    left: 0;
+}
 .navbar-flex-container {
-    border: solid 3px red;
+    /* border: solid 3px red; */
     
     position: fixed;
     display: flex;
     justify-content: flex-end;
-    width: 75vw;
+    width: 100%;
     top: 0;
     z-index: 999;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .navbar-left {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
     
     display: flex;
     align-items: center;
@@ -87,16 +115,17 @@ iframe {
 }
 
 .navbar-right {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
     
     display: flex;
     flex-wrap: wrap;
     flex: 75%;
     justify-content: flex-end;
+    align-content: center;
 }
 
 .nav-links {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
     
     display: flex;
     margin-left: 1.5rem;
@@ -106,44 +135,49 @@ iframe {
 /* product image component */
 /* product image component */
 .product-image {
-    border: solid 3px red;
+    /* border: solid 3px red; */
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 10vh;
+
 }
 
 /* hero component */
 /* hero component */
 /* hero component */
 .hero-flex-container {
-    border: solid 3px red;
+    /* border: solid 3px red; */
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 75vw;
     height: 10vh;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0 auto;
     margin-bottom: 10vh;
+}
+
+.main-heading {
+    margin-bottom: 1rem;
+    font-size: 3rem;
 }
 
 /* feature component */
 /* feature component */
 /* feature component */
 .feature-grid-container {
-    border: solid 3px red;
+    /* border: solid 3px red; */
 
-    display:grid;
-    grid-template-columns: 15% 85%;
+    display: grid;
+    grid-template-columns: 30% 70%;
     margin-bottom: 10vh;
-    width: 50vw;
+    width: 75vw;
     margin: 0 auto;
-    
 }
 
 .feature-icon {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
 
     display: flex;
     justify-content: center;
@@ -151,7 +185,7 @@ iframe {
 }
 
 .feature-description {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
 
     display: flex;
     flex-direction: column;
@@ -185,7 +219,7 @@ iframe {
 /* product video component */
 /* product video component */
 .product-video {
-    border: solid 3px red;
+    /* border: solid 3px red; */
     
     width: fit-content;
     margin: 0 auto;
@@ -197,18 +231,18 @@ iframe {
 /* pricing component */
 /* pricing component */
 .pricing-flex-container {
-    border: solid 3px red;
+    /* border: solid 3px red; */
 
-    display:flex;
+    display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    width: 50vw;
+    width: 75vw;
     margin: 0 auto;
     margin-bottom: 10vh;
 }
 
 .price-card {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
 
 }
 
@@ -216,17 +250,17 @@ iframe {
 /* footer component */
 /* footer component */
 .footer-flex-container {
-    border: solid 3px red;
+    /* border: solid 3px red; */
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
 
 .site-link {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
 
     display: flex;
     justify-content: center;
@@ -234,12 +268,13 @@ iframe {
 
 .nav-link {
     margin-left: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .legal-info {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
     
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -300,6 +335,10 @@ iframe {
     .footer-flex-container {
         flex-direction: column;
         width: 85vw;
+    }
+
+    .site-nav {
+ justify-content: center;
     }
 
     .nav-link {
