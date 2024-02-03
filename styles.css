@@ -1,32 +1,39 @@
 /* TODO:
-- fix hero component
+- make features component into flexbox
 - fix breakpoint
-- fix alignment of footer navlinks
 - refactor code
-- Create variables
 - delete div borders */
 
 
+/*---------- style variables ---------- */
+:root {
+    --navbar-shader: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --content-shader: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  }
 
-/* elements general */
-/* elements general */
-/* elements general */
+
+/* ----------elements general ---------- */
 html {
     margin: 0;
     padding: 0;
 }
 
 body {
-    padding-top: 10vh;
+    padding-top: 15vh;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+h1 {
+    margin: 0;
 }
 
 p {
     font-size: 1.5rem;
 }
 
-h1 {
-    margin: 0;
+a {
+    text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -36,188 +43,195 @@ ul {
     font-size: 1.2rem;
   }
 
+form {
+    display: flex;
+    flex-direction: column;
+  }
+
+input {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: solid 1px black;
+  }
+
+button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;;
+    padding: 0.5rem;
+}
+
 img {
     /* border: solid 3px blue; */
 
     width: 50vw;
-    border-radius: 15%;
-}
-
-a {
-    text-decoration: none;
-    color: black;
+    border-radius: 10%;
 }
 
 iframe {
     /* border: solid 3px blue; */
 }
 
-button {
-    margin-top: 1rem;
-}
 
-/* navbar component */
-/* navbar component */
-/* navbar component */
-
+/* ---------- navbar component ---------- */
 #nav-bar {
     position: fixed;
     display: flex;
-    justify-content: flex-end;
     width: 100%;
     top: 0;
     z-index: 999;
     left: 0;
 }
-.navbar-flex-container {
-    /* border: solid 3px red; */
-    
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-    left: 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+    .navbar-flex-container {
+        /* border: solid 3px red; */
+        
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        left: 0;
+        background-image: var(--navbar-shader);
 }
 
-.navbar-left {
-    /* border: solid 3px blue; */
-    
-    display: flex;
-    align-items: center;
-    flex: 25%;
-}
+    .navbar-left {
+        /* border: solid 3px blue; */
+        
+        display: flex;
+        align-items: center;
+        flex: 25%;
+        padding: 0.5rem;
+    }
 
-.logo-left {
-    width: 2rem;;
-    height: 3rem;
-    background-color: lightblue;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    border-radius: 50%;
-}
+        .logo-left {
+            width: 2rem;;
+            height: 3rem;
+            background-color: lightblue;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            border-radius: 50%;
+        }
 
-.logo-middle {
-    width: 2rem;;
-    height: 3rem;
-    background-color: lightgreen;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    border-radius: 50%;
-}
+        .logo-middle {
+            width: 2rem;;
+            height: 3rem;
+            background-color: lightgreen;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            border-radius: 50%;
+        }
 
-.logo-right {
-    width: 2rem;;
-    height: 3rem;
-    background-color: lightcoral;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    border-radius: 50%;
-}
+        .logo-right {
+            width: 2rem;;
+            height: 3rem;
+            background-color: lightcoral;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            border-radius: 50%;
+        }
 
-.navbar-right {
-    /* border: solid 3px blue; */
-    
-    display: flex;
-    flex-wrap: wrap;
-    flex: 75%;
-    justify-content: flex-end;
-    align-content: center;
-}
+    .navbar-right {
+        /* border: solid 3px blue; */
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex: 75%;
+        justify-content: flex-end;
+        align-content: center;
+        padding: 0.5rem;
+    }
 
-.nav-links {
-    /* border: solid 3px blue; */
-    
-    display: flex;
-    margin-left: 1.5rem;
-}
+        .nav-links {
+            margin-left: 1.5rem;
+            font-size: 1.2rem;
+        }
 
-/* product image component */
-/* product image component */
-/* product image component */
-.product-image {
-    /* border: solid 3px red; */
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 10vh;
 
-}
-
-/* hero component */
-/* hero component */
-/* hero component */
+/* ---------- hero component ---------- */
 .hero-flex-container {
     /* border: solid 3px red; */
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75vw;
-    height: 10vh;
+    width: 50vw;
+    height: 20vh;
     justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    background-image: var(--content-shader);
+    border-radius: 10%;
+}
+
+    .main-heading {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+
+
+    /* ---------- product image component ---------- */
+.product-image {
+    /* border: solid 3px red; */
+    
+    width: fit-content;
     margin: 0 auto;
     margin-bottom: 10vh;
 }
 
-.main-heading {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-}
 
-/* feature component */
-/* feature component */
-/* feature component */
-.feature-grid-container {
+/* ---------- features component ---------- */
+.features-grid-container {
     /* border: solid 3px red; */
 
     display: grid;
     grid-template-columns: 30% 70%;
     margin-bottom: 10vh;
-    width: 75vw;
+    width: 50vw;
     margin: 0 auto;
+    background-image: var(--content-shader);
+    border-radius: 10%;
 }
 
-.feature-icon {
-    /* border: solid 3px blue; */
+    .feature-icon {
+        /* border: solid 3px blue; */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.feature-description {
-    /* border: solid 3px blue; */
+    .feature-description {
+        /* border: solid 3px blue; */
 
-    display: flex;
-    flex-direction: column;
-}
+        display: flex;
+        flex-direction: column;
+    }
 
-.icon-feature-1 {
-    width: 6rem;
-    height: 6rem;
-    background-color: lightblue;
-    border-radius: 100%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+    .icon-feature-1 {
+        width: 6rem;
+        height: 6rem;
+        background-color: lightblue;
+        border-radius: 100%;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
 
-.icon-feature-2 {
-    width:6rem;
-    height: 6rem;
-    background-color: lightgreen;
-    border-radius: 50%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
+    .icon-feature-2 {
+        width:6rem;
+        height: 6rem;
+        background-color: lightgreen;
+        border-radius: 50%;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
 
-.icon-feature-3 {
-    width: 6rem;
-    height: 6rem;
-    background-color: lightcoral;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    border-radius: 5rem;
-}
+    .icon-feature-3 {
+        width: 6rem;
+        height: 6rem;
+        background-color: lightcoral;
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        border-radius: 5rem;
+    }
 
-/* product video component */
-/* product video component */
-/* product video component */
+
+/* ---------- product video component ---------- */
 .product-video {
     /* border: solid 3px red; */
     
@@ -227,9 +241,8 @@ button {
     margin-top: 10vh;
 }
 
-/* pricing component */
-/* pricing component */
-/* pricing component */
+
+/* ---------- pricing component ---------- */
 .pricing-flex-container {
     /* border: solid 3px red; */
 
@@ -239,115 +252,122 @@ button {
     width: 75vw;
     margin: 0 auto;
     margin-bottom: 10vh;
+    background-image: var(--content-shader);
+    border-radius: 10%;
 }
 
-.price-card {
-    /* border: solid 3px blue; */
+    .price-card {
+        /* border: solid 3px blue; */
 
-}
+    }
 
-/* footer component */
-/* footer component */
-/* footer component */
+
+/* ---------- footer component ---------- */
 .footer-flex-container {
     /* border: solid 3px red; */
 
     display: flex;
+    background-image: var(--navbar-shader);
     flex-direction: column;
     justify-content: flex-end;
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
 }
 
-.site-link {
-    /* border: solid 3px blue; */
+    .site-nav {
+        /* border: solid 3px blue; */
 
-    display: flex;
-    justify-content: center;
-}
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+    }
 
-.nav-link {
-    margin-left: 1.5rem;
-    font-size: 1.2rem;
-}
+    .legal-info {
+        /* border: solid 3px blue; */
+        
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+    }
 
-.legal-info {
-    /* border: solid 3px blue; */
-    
-    display: flex;
-    justify-content: flex-end;
-}
 
-/* Media Query */
-/* Media Query */
-/* Media Query */
+/* ---------- Media Query ---------- */
 @media (max-width: 648px) {
+
+
+    /* ----------elements general ---------- */
     body {
         background-color: grey;
         padding-top: 15vh;
     }
 
+    iframe {
+        width: 17rem;
+        height: 17rem;
+    }
+
+
+    /* ---------- navbar component ---------- */
     .navbar-flex-container {
         flex-direction: column;
     }
 
-    .navbar-left {
-        justify-content: center;
-    }
+        .navbar-left {
+            justify-content: center;
+        }
 
-    .navbar-right {
-        justify-content: center;
-    }
+        .navbar-right {
+            justify-content: center;
+        }
 
+
+    /* ---------- hero component ---------- */
     .hero-flex-container {
         width: 80vw;
         height: 20vh;
         margin-bottom: 3vh;
     }
 
+    
+    /* ---------- product image component ---------- */
     .product-image {
         margin-bottom: 3vh;
     }
 
-    .feature-grid-container {
+    /* ---------- features component ---------- */
+    .features-grid-container {
         grid-template-columns: 30% 70%;
         width: 80vw;
         margin-bottom: 3vh;
     }
 
+
+    /* ---------- product video component ---------- */
     .product-video {
         margin-top: 3vh;
         margin-bottom: 3vh;
     }
 
-    iframe {
-        width: 17rem;
-        height: 17rem;
 
-    }
-
+    /* ---------- pricing component ---------- */
     .pricing-flex-container {
         flex-direction: column;
         width: 75vw;
         margin-bottom: 3vh;
     }
 
+
+    /* ---------- footer component ---------- */
     .footer-flex-container {
         flex-direction: column;
         width: 85vw;
     }
 
-    .site-nav {
- justify-content: center;
-    }
-
-    .nav-link {
-      margin-left: 0.5rem;
-      display: flex;
-    }
-
-    .legal-info {
+        .site-nav {
         justify-content: center;
+        }
+
+        .legal-info {
+            justify-content: center;
     }
 }
 
