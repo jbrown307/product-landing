@@ -75,6 +75,10 @@ iframe {
     /* border: solid 3px blue; */
 }
 
+span {
+    text-decoration: underline;
+}
+
 
 /* ---------- navbar component ---------- */
 #nav-bar {
